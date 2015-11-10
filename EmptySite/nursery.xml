@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <poem>
-<title>Nursery Song</title><br />
-<body>
-Humpty Dumpty sat on a wall<br />
-Humpty Dumpty had a great fall<br />
-All the kings horses and all the king's men<br />
-Could not put humpty together again.<br />
+<title>Nursery Song</title>
+
+<line>Humpty Dumpty sat on a wall</line>
+<line>Humpty Dumpty had a great fall</line>
+<line>All the kings horses and all the king's men</line>
+<line>Could not put humpty together again.</line>
 </body>
 </poem>
