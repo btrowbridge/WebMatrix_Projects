@@ -16,7 +16,13 @@
             xhttp.open("GET", "nursery.xml", false);
             xhttp.send();
             xmlDoc = xhttp.responseXML;
-            document.write(xmlDoc.getElementByTagName("poem")[0].childNodes[0].nodeValue);
+            var poem = xmlDoc.getElementsByTagName("poem")[0];
+            var title = poem.getElementsByTagName("title")[0].innerHTML;
+            var lines = xmlDoc.getElementsByTagName("line");
+            document.write("<h1>" + title + "</h1>");
+            for (i in lines) {
+                if(lines[i].innerHTML) document.writeln("<p>" + lines[i].innerHTML + "</p>");
+            }
         </script>
     </body>
 </html>
