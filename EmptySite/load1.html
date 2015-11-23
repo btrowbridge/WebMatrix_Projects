@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id = "p1"></p>
+        <script>
+            if (window.XMLHttpRequest)
+                xhttp = new XMLHttpRequest();
+            else // for IE 5/6  
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            xhttp.open("GET", "nursery.xml", false);
+            xhttp.send();
+            xmlDoc = xhttp.responseXML;
+            var i;
+            var s = "";
+            for (i = 0; i < xmlDoc.getElementsByTagName("line").length; i++)
+                s = s + xmlDoc.getElementsByTagName("line")[i].childNodes[0].nodeValue + "<br>";
+            s = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + "<br>" + s;
+            document.getElementById("p1").innerHTML = s;
+        </script>
+    </body>
+</html>
